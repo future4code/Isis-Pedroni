@@ -23,7 +23,8 @@ function imprimeMensagem() {
 // Exercício 1
 function calculaAreaRetangulo() {
   // escreva seu código aqui
-let num1 = prompt('Digite o primeiro número')
+ let num1 = prompt('Digite o primeiro número')
+
  let num2 = prompt('Digite o segundo número')
 
  console.log(Number(num1) * Number(num2))
@@ -52,11 +53,13 @@ function calculaIMC() {
 // Exercício 4
 function imprimeInformacoesUsuario() {
   // escreva seu código aqui
+
   const nome = prompt("Informe seu nome:")
   const idade = prompt(Number("Informe sua idade:"))
   const email = prompt("Informe seu email:")
-
+  
   console.log("Meu nome é " + nome + ", tenho " + idade + " anos, e o meu email é " + email +".")
+ 
 }
 
 // Exercício 5
@@ -87,6 +90,7 @@ function calculaIngressosEspetaculo() {
 // Exercício 8
 function checaStringsMesmoTamanho() {
   // escreva seu código aqui
+
   let palavra1 = prompt("Digite uma palavra:")
   let palavra2 = prompt("Digite outra palavra:")
   console.log(palavra1.length == palavra2.length)
@@ -95,9 +99,11 @@ function checaStringsMesmoTamanho() {
 // Exercício 9
 function checaIgualdadeDesconsiderandoCase() {
   // escreva seu código aqui
+
   let palavra1 = prompt("Digite uma palavra:")
   let palavra2 = prompt("Digite outra palavra:")
   console.log(palavra1.toUpperCase() == palavra2.toUpperCase())
+
 }
 
 // Exercício 10
@@ -106,6 +112,7 @@ function checaRenovacaoRG() {
 const anoAtual = Number(prompt("Em que ano estamos"))
 const anoNascimento = Number(prompt("Ano de nascimento:"))
 const anoCarteira = Number(prompt("Ano em que sua carteira de identidade foi emitida:"))
+
 
 let calculoAno = anoAtual - anoNascimento
 let renovacaoCarteira = anoAtual - anoCarteira
@@ -119,17 +126,18 @@ function checaAnoBissexto() {
 const umAno = Number(prompt("Digite um Ano:"))
 let resultadoBis = (umAno % 400 == 0) || (umAno %4 == 0 && umAno % 100 != 0)
 console.log(resultadoBis)
+
 }
 
 // Exercício 12
 function checaValidadeInscricaoLabenu() {
   // escreva seu código aqui
+
 const maiorIdade = prompt("Você tem mais de 18 anos?") =="sim"
 const medioCompleto = prompt("Você possui ensino médio completo?") =="sim"
 const horasDisponiveis = prompt("Você possui disponibilidade exclusiva durante os horários do curso?") =="sim"
 
 console.log(maiorIdade && medioCompleto && horasDisponiveis)
-
 
 
 }
