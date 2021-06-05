@@ -24,6 +24,7 @@ function imprimeMensagem() {
 function calculaAreaRetangulo() {
   // escreva seu código aqui
  let num1 = prompt('Digite o primeiro número')
+
  let num2 = prompt('Digite o segundo número')
 
  console.log(Number(num1) * Number(num2))
@@ -37,7 +38,6 @@ function imprimeIdade() {
   let idadeFinal = (anoAtual - anoNasciemnto)
 
   console.log(idadeFinal)
-
 }
 
 // Exercício 3
@@ -48,7 +48,6 @@ function calculaIMC() {
   let imc = (pesokg/(altura * altura))
 
   console.log(imc)
-
 }
 
 // Exercício 4
@@ -70,7 +69,6 @@ function imprimeTresCoresFavoritas() {
   let corDois = prompt ("Qual é a sua segunda cor preferida?")
   let CorTres = prompt ("Qual é a sua terceira cor preferida?")
   console.log ([corUm, corDois, CorTres])
-
 }
 
 // Exercício 6
@@ -92,18 +90,20 @@ function calculaIngressosEspetaculo() {
 // Exercício 8
 function checaStringsMesmoTamanho() {
   // escreva seu código aqui
-  let palavra1 = String(prompt("Digite uma palavra:"))
-  let palavra2 = String(prompt("Digite outra palavra:"))
-  let resultado = palavra1 >= palavra1
-  console.log(resultado)
+
+  let palavra1 = prompt("Digite uma palavra:")
+  let palavra2 = prompt("Digite outra palavra:")
+  console.log(palavra1.length == palavra2.length)
 }
 
 // Exercício 9
 function checaIgualdadeDesconsiderandoCase() {
   // escreva seu código aqui
-  let palavra1 = String(prompt("Digite uma palavra:"))
-  let palavra2 = String(prompt("Digite outra palavra:"))
-  console.log(palavra1,palavra1.lowerCase())
+
+  let palavra1 = prompt("Digite uma palavra:")
+  let palavra2 = prompt("Digite outra palavra:")
+  console.log(palavra1.toUpperCase() == palavra2.toUpperCase())
+
 }
 
 // Exercício 10
@@ -113,24 +113,31 @@ const anoAtual = Number(prompt("Em que ano estamos"))
 const anoNascimento = Number(prompt("Ano de nascimento:"))
 const anoCarteira = Number(prompt("Ano em que sua carteira de identidade foi emitida:"))
 
-}
 
+let calculoAno = anoAtual - anoNascimento
+let renovacaoCarteira = anoAtual - anoCarteira
+let resultadoRG = ((calculoAno <= 20) && (renovacaoCarteira >= 5)) || ((calculoAno > 20) && (calculoAno <= 50) && (renovacaoCarteira >= 10)) || ((anoCarteira > 50) && (renovacaoCarteira >= 15))
+console.log(resultadoRG)
+
+}
 // Exercício 11
 function checaAnoBissexto() {
   // escreva seu código aqui
+const umAno = Number(prompt("Digite um Ano:"))
+let resultadoBis = (umAno % 400 == 0) || (umAno %4 == 0 && umAno % 100 != 0)
+console.log(resultadoBis)
+
 }
 
 // Exercício 12
 function checaValidadeInscricaoLabenu() {
   // escreva seu código aqui
 
-let = maiorIdade == sim
-let = medioCompleto == sim
-let = horasDisponiveis == sim
+const maiorIdade = prompt("Você tem mais de 18 anos?") =="sim"
+const medioCompleto = prompt("Você possui ensino médio completo?") =="sim"
+const horasDisponiveis = prompt("Você possui disponibilidade exclusiva durante os horários do curso?") =="sim"
 
-const maiorIdade = prompt("Você tem mais de 18 anos?")
-const medioCompleto = prompt("Você possui ensino médio completo?")
-const horasDisponiveis = prompt("Você possui disponibilidade exclusiva durante os horários do curso?")
+console.log(maiorIdade && medioCompleto && horasDisponiveis)
 
 
 }
