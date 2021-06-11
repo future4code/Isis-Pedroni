@@ -1,4 +1,5 @@
-console.log("Aula 08 - Condicionais lá")
+console.log("Aula 08 - Condicionais")
+
 
 
 //------------------Exercícios de interpretação de códig
@@ -10,10 +11,10 @@ console.log("Aula 08 - Condicionais lá")
 //-------------2
 
 // a) Para que serve o código acima?
-//serve para procurar uma indormação
+//serve para procurar uma informação
 
 // b) Qual será a mensagem impressa no console, se o valor de fruta for `"Maçã"`?
-// o  preco = 2.25
+// o  preco = 2,25
 
 // c) 
 
