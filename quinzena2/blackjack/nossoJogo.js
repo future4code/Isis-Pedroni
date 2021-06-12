@@ -12,3 +12,13 @@
  */
 
   //        PROJETO!
+
+
+console.log("Bem vindo(a) ao jogo de Blackjack!")
+
+
+if(confirm("pergunta de sim ou não")) {
+	// o que fazer se o usuário clicar "ok"
+} else {
+	return "O jogo acabou"
+}
