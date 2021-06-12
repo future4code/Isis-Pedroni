@@ -21,8 +21,8 @@ if(confirm("pergunta de sim ou não")) {
 
    let carta1Jogador = comprarCarta()
    let carta2Jogador = comprarCarta()
-   let carta1PC = comprarCarta()
-   let carta2PC = comprarCarta()
+   let carta1Pc = comprarCarta()
+   let carta2Pc = comprarCarta()
 
 
    let somaCartaJogador = 
