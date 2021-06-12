@@ -19,9 +19,14 @@ console.log("Bem vindo(a) ao jogo de Blackjack!")
 let jogar = confirm("Quer iniciar uma nova rodada?")
 if(confirm("pergunta de sim ou não")) {
 
-   const carta1Jogador = comprarCarta()
-   const carta2Jogador = comprarCarta()
-   
+   let carta1Jogador = comprarCarta()
+   let carta2Jogador = comprarCarta()
+   let carta1PC = comprarCarta()
+   let carta2PC = comprarCarta()
+
+
+   let somaCartaJogador = 
+   let somaCartaPc = 
 
 
 
