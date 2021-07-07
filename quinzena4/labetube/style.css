@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    background-color: rgb(209, 156, 9);
+    height: 4em;
+}
+
+
+.videos-main{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+video{
+    width: 100%;
+    
+}
+
+
+footer {
+    display: flex;
+    background-color: rgb(209, 156, 9);
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    height: 4em;
+  }
+
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    margin: 8px;
+    overflow: auto;
+    padding: 32px;
+  } 
+  
