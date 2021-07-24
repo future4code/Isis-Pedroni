@@ -1,0 +1,114 @@
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+     }
+    
+
+     /* menu */
+    .clear {clear: both;}
+    
+
+    .logo{ float: left; 
+        padding: 30px;
+    }
+    
+    .logo h2{ font-weight: normal;
+    font-size: 23px;}
+    
+    
+    nav.menu-desktop{
+        float: right;
+    }
+    
+    nav.menu-desktop ul{ 
+    position: relative;
+    top: 38px
+    }
+    
+    nav.menu-desktop li{
+    display: inline-block;
+    font-weight: lighter;
+    padding: 0 10px;
+    }
+    
+    nav.menu-desktop a{ 
+    color: rgb(192, 19, 91);
+  
+    }
+
+
+
+    /* section index.html */
+
+
+    section.fundo{
+        position: relative;
+        width: 100%;
+        padding: 100px 100px 100px 100px;
+        background-image: url('img/fundo.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+    }
+
+    section.fundo > .Text{
+        position: relative;
+        z-index: 2;
+    }
+
+
+    
+.opacidade{
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(49, 16, 32, 0.6);
+	left: 0;
+	top: 0;
+}
+
+
+
+    section.fundo h1{
+        font-size: 30px;
+        font-weight: normal;
+        color: lavender;
+    }
+
+    section.fundo p{
+        text-align:left;
+        font-size: 15px;
+        margin-top: 15px;
+        color: lavender;
+      
+    }
+
+
+    /* rodape */
+  
+    .rodape {
+        position:absolute;
+        bottom:0;
+        width:100%;
+        background-color: lightcoral;
+       
+    }
+
+    .tamanho{
+        float: right;
+        width: 100% ;
+        text-align: right
+    
+    }
+    
+    .siga{
+        font-weight: bold;     
+        /* float:left;  */
+        width: 10%;
+        float: left;
+    
+    
+    }
