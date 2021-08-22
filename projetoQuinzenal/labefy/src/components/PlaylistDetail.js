@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 
-const playlists = styled.div `
+const PlaylistDetailContainer = styled.div `
    
    `
 
-class Playlists extends React.Component {
+class PlaylistDetail extends React.Component {
     state = {
         
     }
@@ -14,7 +14,7 @@ class Playlists extends React.Component {
     render() {
         return(
             <playlists>
-            <button onClick={() => this.props.trocandoPagina("playlistDetail")}>abrir playlists</button>    
+             <button onClick={() => this.props.trocandoPagina("playlists")}>Voltar playlists</button>       
             </playlists>
         )
     }
@@ -23,4 +23,4 @@ class Playlists extends React.Component {
     
    
 
-export default Playlists
+export default PlaylistDetail
