@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
+import axios from "axios"
 
 const HomeConatiner = styled.div`
     display: flex;
@@ -21,16 +22,46 @@ const Container = styled.div`
     margin: 20px;
 `
 
+const BotoesDeEscolha = styled.button `
+    margin: 20px;
+`
+
 
 export const HomePage = () => {
+    const [profile, setProfile] = useState({})
+    
+    const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/isis-pedroni-johnson/person"
+   
+    useEffect(() => {
+        PegandoPerfil()
+    }, [])
+   
+    const PegandoPerfil = () => {
+        axios.get(url)
+        .then((res) => {
+            setProfile(res.data.profile)
+        })
+        .catch((err) => {
+            console.log(err.response)
+        })
+    }
+
+    const escolhendoPessoa = () => {
+        
+    }
+
+
+
+
     return (
         <HomeConatiner>
             <Container>
-                <ImgContainer src="aqui vai uma foto" />
-                <p> texto de apresentação </p>
+                <ImgContainer src={profile.photo} />
+                <h2>{profile.name}, {profile.age}</h2>
+                <p>{profile.bio}</p>
                 <div>
-                    <button> like </button>
-                    <button> Dislike </button>
+                    <BotoesDeEscolha onClick={escolhendoPessoa}> like </BotoesDeEscolha>
+                    <BotoesDeEscolha onClick={escolhendoPessoa}> Dislike </BotoesDeEscolha>
                 </div>
             </Container>
         </HomeConatiner>

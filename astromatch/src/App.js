@@ -20,7 +20,7 @@ const limpandoMatches = () => {
 
   return (
     <div>
-      {paginaAtual == "home" ? <HomePage/> : <MatchesPage />}
+      {paginaAtual === "home" ? <HomePage/> : <MatchesPage />}
       <button onClick={TrocandoPagina}>{paginaAtual === "home" ? "ir para matches" : "ir para home"}</button>
       <button onClick={limpandoMatches}>limpar matches</button>
     </div>
