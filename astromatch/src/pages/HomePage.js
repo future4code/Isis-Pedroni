@@ -30,14 +30,14 @@ const BotoesDeEscolha = styled.button `
 export const HomePage = () => {
     const [profile, setProfile] = useState({})
     
-    const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/isis-pedroni-johnson/person"
+    const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/isis-pedroni-johnson"
    
     useEffect(() => {
-        PegandoPerfil()
+        pegandoPerfil()
     }, [])
    
-    const PegandoPerfil = () => {
-        axios.get(url)
+    const pegandoPerfil = () => {
+        axios.get(url + "/person")
         .then((res) => {
             setProfile(res.data.profile)
         })
@@ -46,8 +46,19 @@ export const HomePage = () => {
         })
     }
 
-    const escolhendoPessoa = () => {
-        
+    
+    const escolhendoPessoa = (escolha) => {
+        const body = {
+            "id": profile.id,
+            "choice": escolha
+        }
+        axios.post(url + "/choose-person", body)
+        .then((res) => {
+            pegandoPerfil()
+        })
+        .catch((err) => {
+            console.log(err.response)
+        })
     }
 
 
@@ -55,15 +66,17 @@ export const HomePage = () => {
 
     return (
         <HomeConatiner>
+            {!profile ? <div>Voce é muito exigente!Aperte o botão de Limpar Macthes</div> : 
             <Container>
                 <ImgContainer src={profile.photo} />
                 <h2>{profile.name}, {profile.age}</h2>
                 <p>{profile.bio}</p>
                 <div>
-                    <BotoesDeEscolha onClick={escolhendoPessoa}> like </BotoesDeEscolha>
-                    <BotoesDeEscolha onClick={escolhendoPessoa}> Dislike </BotoesDeEscolha>
+                    <BotoesDeEscolha onClick={() => escolhendoPessoa(true)}> like </BotoesDeEscolha>
+                    <BotoesDeEscolha onClick={() => escolhendoPessoa(false)}> Dislike </BotoesDeEscolha>
                 </div>
             </Container>
+            }
         </HomeConatiner>
     )
 }

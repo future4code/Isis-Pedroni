@@ -6,7 +6,7 @@ const App = () => {
 
 const [paginaAtual, setPaginaAtual] = useState("home")
 
-const TrocandoPagina = () => {
+const trocandoPagina = () => {
   if (paginaAtual === "home"){
     setPaginaAtual("matches")
   }else {
@@ -14,15 +14,12 @@ const TrocandoPagina = () => {
   }
 }
 
-const limpandoMatches = () => {
-  console.log("limpa macthes")
-}
+
 
   return (
     <div>
       {paginaAtual === "home" ? <HomePage/> : <MatchesPage />}
-      <button onClick={TrocandoPagina}>{paginaAtual === "home" ? "ir para matches" : "ir para home"}</button>
-      <button onClick={limpandoMatches}>limpar matches</button>
+      <button onClick={trocandoPagina}>{paginaAtual === "home" ? "ir para matches" : "ir para home"}</button>
     </div>
   );
 }
